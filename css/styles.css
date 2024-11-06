@@ -1,3 +1,8 @@
+/*TYPOS
+space grotesk medium 12,18
+*/
+
+
 *{
     box-sizing: border-box;
 }
@@ -24,6 +29,282 @@ ul{
 }
 
 body{
-    font-family: sans-serif;
+    font-family: "Space Grotesk";
     margin: 0;
+    font-weight: 500;
 }
+
+input[type='number']::-webkit-inner-spin-button,
+
+input[type='number']::-webkit-outer-spin-button {
+
+  -webkit-appearance: none;
+
+}
+
+input[type='number'] {
+
+  -moz-appearance: textfield;
+
+}
+/*
+:root{
+    --viewError: none;
+}*/
+
+@media screen and (width>768px){
+    .main{
+        display: flex;
+        height: 100vh;
+    }
+}
+
+.cards{
+    width: 100%;
+    height: 240px;
+    position: relative;
+    top: 0;
+    background-image: url(../images/bg-main-mobile.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding-top: 32px;
+    padding-inline: 16px;
+    margin-bottom: 91px;
+}
+
+@media screen and (width>768px){
+    .cards{
+        display: flex;
+        background-image: url(../images/bg-main-desktop.png);
+        background-size: cover;
+        width: 483px;
+        height: 100vh;
+        margin-right: 349px;
+    }
+}
+
+.card{
+    width: 286px;
+    height: 157px;
+    border-radius: 6px;
+}
+
+.image1{
+    background-image: url(../images/bg-card-back.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    right: 16px;
+    z-index: 0;
+    font-size: 12px;
+    padding-top: 58px;
+    padding-left: 230px;
+    color: white;
+}
+@media screen and (width>768px){
+    .image1{
+        top: 380px;
+        left: 340px;
+        margin-top: 36px;
+    }
+}
+
+
+.image2{
+    background-image: url(../images/bg-card-front.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position:absolute;
+    z-index: 1;
+    top:126px;
+    bottom: 0px;
+    font-size: 18px;
+    padding: 20px;
+    color: white;
+}
+
+@media screen and (width>768px){
+    .image2{
+        top: 187px;
+        left: 280px;
+        margin-top: 36px;
+    }
+}
+
+.frontnumber{
+    letter-spacing: 2px;
+}
+
+.datasmall{
+    display: flex;
+    justify-content: space-between;
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+.logo{
+    width: 54px;
+    height: 30px;
+}
+
+.formulario{
+    width: 327px;
+    left: 24px;
+    margin-inline:auto;
+}
+
+@media screen and (width>768px){
+    .formulario{
+        margin-top: 275px;
+        margin-left: 0px;
+    }
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 327px;
+    margin-bottom: 26px;
+}
+
+@media screen and (width>768px){
+    .form{
+        width: 381px;
+    }
+}
+
+.input{
+    width: 100%;
+    height: 45px;
+    border-radius: 8px;
+    padding-left: 16px;
+    border: 1px solid #DFDEE0;
+}
+
+.input:focus{
+    border: 1px solid #610595;
+}
+
+
+.lastform{
+    width: 327px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media screen and (width>768px){
+    .lastform{
+        width: 381px;
+    }
+}
+
+.formdatebig{
+    width: 152px; 
+}
+
+@media screen and (width>768px){
+    .formdatenig{
+        width: 170px;
+    }
+}
+
+.dateboxes{
+    margin-top: 9px;
+    display: flex;
+    justify-content: space-between;
+}
+@media screen and (width>768px){
+    .dateboxes{
+        width: 170px;
+    }
+}
+
+.smallinput{
+    width: 72px;
+    height: 45px;
+    border-radius: 8px;
+    padding-left: 16px;
+    border: 1px solid #DFDEE0;
+}
+
+.smallinput:focus{
+    border: 1px solid #610595;
+}
+
+@media screen and (width>768px){
+    .smallinput{
+        width: 80px;
+    }
+}
+
+.cvc{
+    width: 164px;
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (width>768px){
+    .cvc{
+        width: 191px;
+    }
+}
+
+.cvcinput{
+    width: 164px;
+    border-radius: 8px;
+}
+
+@media screen and (width>768px){
+    .cvcinput{
+        width: 191px;
+    }
+}
+
+.error{
+    color: red;
+    margin-top: 8px;
+    font-size: 12px;
+    margin-bottom: 0px;
+    width: 100px;
+}
+
+/*
+.errordisplay{
+    display: var(--viewError);
+}*/
+
+.title{
+    font-size: 12px;
+    color: #21092F;
+    margin-bottom: 9px;
+}
+
+.text{
+    width: 327px;
+    height: 45px;
+    font-size: 18px;
+    color: #21092F;
+}
+
+.buttonbox{
+    margin-top: 28px;
+}
+
+.button{
+    width: 327px;
+    height: 53px;
+    background-color: #21092F ;
+    color: white;
+    border-radius: 8px;
+    font-size: 18px;
+    border: none;
+}
+
+@media screen and (width>768px){
+    .button{
+        width: 381px;
+    }
+}
+
+

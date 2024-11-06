@@ -1,12 +1,103 @@
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Credit Card Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;1,9..144,700&family=Montserrat:ital,wght@0,500;1,500&family=Space+Grotesk:wght@500&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
+    <main class="main">
+      <div class="cards">
+        <div class="image1 card">
+          <p id="cvcCard" class="carddata">000</p>
+        </div>
+        <div class="image2 card">
+          <img class="logo" src="images/card-logo.svg" alt="Logo card" />
+          <p id="cardnumberCard" class="frontnumber">0000 0000 0000 0000</p>
+          <div class="datasmall">
+            <p id="cardnameCard" class="carddata">JANE APPLESEED</p>
+            <p id="expdateCard" class="carddata">00/00</p>
+          </div>
+        </div>
+      </div>
+
+      <form class="formulario" id="form">
+        <div class="form">
+          <label class="title" for="cardname">CARDHOLDER NAME</label>
+          <input
+            class="input"
+            type="text"
+            id="cardname"
+            name="user"
+            placeholder="e.g. Jane Appleseed"
+          />
+          <p class="error errordisplay" id="nameError">Can’t be blank</p>
+        </div>
+        <div class="form">
+          <label class="title" for="cardnumber">CARD NUMBER</label>
+          <input
+            class="input"
+            type="number"
+            id="cardnumber"
+            name="cardnumber"
+            placeholder="e.g. 1234 5678 9123 0000"
+          />
+          <p class="error errordisplay" id="numberError">Can’t be blank</p>
+        </div>
+        <div class="lastform">
+          <div class="formdatebig">
+            <label class="title" for="expmonth">EXP. DATE (MM/YY)</label>
+            <div class="dateboxes">
+              <div class="expbox">
+                <input
+                  class="smallinput"
+                  type="number"
+                  id="expmonth"
+                  name="month"
+                  placeholder="MM"
+                />
+                <p class="error errordisplay" id="monthError">Can’t be blank</p>
+              </div>
+              <div class="yearbox">
+                <input
+                  class="smallinput"
+                  type="number"
+                  id="expyear"
+                  name="year"
+                  placeholder="YY"
+                />
+                <p class="error errordisplay" id="yearError">Can’t be blank</p>
+              </div>
+            </div>
+          </div>
+          <div class="cvc">
+            <label class="title" for="cvc">CVC</label>
+            <input
+              class="smallinput cvcinput"
+              type="number"
+              id="cvc"
+              name="cvc"
+              placeholder="e.g. 123"
+            />
+            <p class="error errordisplay" id="cvcError">Can’t be blank</p>
+          </div>
+        </div>
+        <div class="buttonbox">
+          <input
+            class="button"
+            id="confirmation"
+            type="submit"
+            value="Confirm"
+          />
+        </div>
+      </form>
+    </main>
     <script src="js/scripts.js"></script>
   </body>
 </html>
