@@ -22,7 +22,10 @@
           <p id="cardnumberCard" class="frontnumber">0000 0000 0000 0000</p>
           <div class="datasmall">
             <p id="cardnameCard" class="carddata">JANE APPLESEED</p>
-            <p id="expdateCard" class="carddata">00/00</p>
+            <div>
+              <span id="expdateCard" class="carddata">00</span>
+              <span id="expyearCard" class="carddata">/00</span>
+            </div>
           </div>
         </div>
       </div>
@@ -47,6 +50,7 @@
             id="cardnumber"
             name="cardnumber"
             placeholder="e.g. 1234 5678 9123 0000"
+            maxlength="16"
           />
           <p class="error errordisplay" id="numberError">Can’t be blank</p>
         </div>
@@ -61,6 +65,7 @@
                   id="expmonth"
                   name="month"
                   placeholder="MM"
+                  maxlength="2"
                 />
                 <p class="error errordisplay" id="monthError">Can’t be blank</p>
               </div>
@@ -71,6 +76,7 @@
                   id="expyear"
                   name="year"
                   placeholder="YY"
+                  maxlength="2"
                 />
                 <p class="error errordisplay" id="yearError">Can’t be blank</p>
               </div>
@@ -84,6 +90,7 @@
               id="cvc"
               name="cvc"
               placeholder="e.g. 123"
+              maxlength="3"
             />
             <p class="error errordisplay" id="cvcError">Can’t be blank</p>
           </div>

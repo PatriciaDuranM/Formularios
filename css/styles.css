@@ -269,10 +269,10 @@ input[type='number'] {
     width: 100px;
 }
 
-/*
+
 .errordisplay{
-    display: var(--viewError);
-}*/
+    display: none;
+}
 
 .title{
     font-size: 12px;

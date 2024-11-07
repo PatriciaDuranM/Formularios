@@ -16,6 +16,7 @@ const cvcCardElement = document.getElementById("cvcCard");
 const cardnumberCardElement = document.getElementById("cardnumberCard");
 const cardnameCardElement = document.getElementById("cardnameCard");
 const expdateCardElement = document.getElementById("expdateCard");
+const expyearCardElement = document.getElementById("expyearCard");
 
 /*inputs*/
 
@@ -39,57 +40,47 @@ const button = document.getElementById("confirmation");
 /*formulario entero*/
 const formElement = document.getElementById("form");
 
-const start = () => {
-  nameErrorElement.style.display = "none";
-  numberErrorElement.style.display = "none";
-  monthErrorElement.style.display = "none";
-  yearErrorElement.style.display = "none";
-  cvcErrorElement.style.display = "none";
-};
-
 const validation = (event) => {
   event.preventDefault();
 
-  start();
-
   /*nombre*/
   if (cardnameElement.value === "") {
-    nameErrorElement.style.display = "block";
+    nameErrorElement.classList.remove("errordisplay");
     console.log("campo no validado");
   } else {
-    nameErrorElement.style.display = "none";
+    nameErrorElement.classList.add("errordisplay");
     console.log("campo validado");
   }
   /*numero*/
   if (cardnumberElement.value === "") {
-    numberErrorElement.style.display = "block";
+    numberErrorElement.classList.remove("errordisplay");
     console.log("campo no validado");
   } else {
-    numberErrorElement.style.display = "none";
+    numberErrorElement.classList.add("errordisplay");
     console.log("campo validado");
   }
   /*mes*/
   if (expmonthElement.value === "") {
-    monthErrorElement.style.display = "block";
+    monthErrorElement.classList.remove("errordisplay");
     console.log("campo no validado");
   } else {
-    monthErrorElement.style.display = "none";
+    monthErrorElement.classList.add("errordisplay");
     console.log("campo validado");
   }
   /*año*/
   if (expyearElement.value === "") {
-    yearErrorElement.style.display = "block";
+    yearErrorElement.classList.remove("errordisplay");
     console.log("campo no validado");
   } else {
-    yearErrorElement.style.display = "none";
+    yearErrorElement.classList.add("errordisplay");
     console.log("campo validado");
   }
   /*cvc*/
-  if (cvcElementElement.value === "") {
-    cvcErrorElement.style.display = "block";
+  if (cvcElement.value === "") {
+    cvcErrorElement.classList.remove("errordisplay");
     console.log("campo no validado");
   } else {
-    cvcErrorElement.style.display = "none";
+    cvcErrorElement.classList.add("errordisplay");
     console.log("campo validado");
   }
 };
@@ -126,12 +117,22 @@ const printMonth = () => {
   if (expmonthElement.value !== "") {
     expdateCardElement.textContent = expmonthElement.value;
   } else {
-    expdateCardElement.textContent = "00/00";
+    expdateCardElement.textContent = "00";
   }
 };
-cardnumberElement.addEventListener("input", printMonth);
+expmonthElement.addEventListener("input", printMonth);
 
 /*Impresion del expyear*/
+
+const printYear = () => {
+  if (expyearElement.value !== "") {
+    expyearCardElement.textContent = expyearElement.value;
+  } else {
+    expyearCardElement.textContent = "/00";
+  }
+};
+
+expyearElement.addEventListener("input", printMonth);
 
 /*Impresion del cvc ¿como hacer que printee solo 3 valores*/
 
