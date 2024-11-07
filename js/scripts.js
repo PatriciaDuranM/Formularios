@@ -103,6 +103,9 @@ cardnameElement.addEventListener("input", printCardName);
 /*Impresion del numero*/
 
 const printNumber = () => {
+  if (cardnumberElement.value.length > 16) {
+    cardnumberElement.value = cardnumberElement.value.substring(0, 16);
+  }
   if (cardnumberElement.value !== "") {
     cardnumberCardElement.textContent = cardnumberElement.value;
   } else {
@@ -114,6 +117,9 @@ cardnumberElement.addEventListener("input", printNumber);
 /*Impresion del expmonth solo 2 num de los dos campos en un solo campo*/
 
 const printMonth = () => {
+  if (expmonthElement.value.length > 2) {
+    expmonthElement.value = expmonthElement.value.substring(0, 2);
+  }
   if (expmonthElement.value !== "") {
     expdateCardElement.textContent = expmonthElement.value;
   } else {
@@ -125,18 +131,24 @@ expmonthElement.addEventListener("input", printMonth);
 /*Impresion del expyear*/
 
 const printYear = () => {
+  if (expyearElement.value.length > 2) {
+    expyearElement.value = expyearElement.value.substring(0, 2);
+  }
   if (expyearElement.value !== "") {
-    expyearCardElement.textContent = expyearElement.value;
+    expyearCardElement.textContent = "/" + expyearElement.value;
   } else {
     expyearCardElement.textContent = "/00";
   }
 };
 
-expyearElement.addEventListener("input", printMonth);
+expyearElement.addEventListener("input", printYear);
 
 /*Impresion del cvc ¿como hacer que printee solo 3 valores*/
 
 const printCvc = () => {
+  if (cvcElement.value.length > 3) {
+    cvcElement.value = cvcElement.value.substring(0, 3);
+  }
   if (cvcElement.value !== "") {
     cvcCardElement.textContent = cvcElement.value;
   } else {
